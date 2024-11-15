@@ -1,7 +1,5 @@
 # Environnement virtuel
 venv/
-# Données
-data/
 # Fichiers de configuration Jupyter Notebook
 .ipynb_checkpoints/
 # Fichiers temporaires
