@@ -43,6 +43,24 @@ Installez les bibliothèques nécessaires à partir du fichier `requirements.txt
 pip install -r requirements.txt
 ```
 
+#### 3.1 Installation Hadoop
+
+Pour pouvoir sauvegarder les fichiers : 
+
+1. Téléchargement d'Hadoop
+```
+curl -O https://dlcdn.apache.org/hadoop/common/hadoop-3.3.2/hadoop-3.3.2.tar.gz
+tar -xvzf hadoop-3.3.2.tar.gz
+mv hadoop-3.3.2 /usr/local/hadoop
+```
+
+2. Modification des variables d'environnement
+
+```
+export HADOOP_HOME=/usr/local/hadoop
+export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
+```
+
 ### 4. Structure du projet
 
 Voici l'architecture du projet :
