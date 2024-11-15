@@ -16,7 +16,7 @@ import os
 os.environ['PYSPARK_LOG'] = 'OFF'
 
 
-path = "/Users/SIMON/Downloads/episen/data"
+path = "/Users/SIMON/episen_tp1_spark/data/1_spark_basics_output"
 
 # Créer un DataFrame simple
 data = [("James", "Smith", "USA", 1, 200), 
@@ -47,7 +47,10 @@ print("example of groupby : ")
 df4.groupBy("value").count().show()
 
 print("show : ")
-spark.read.parquet(path).where() # à changer
+#spark.read.parquet(path).where() # à changer
 
 df.createOrReplaceTempView("personnes")
 result = spark.sql("SELECT * FROM personnes WHERE ID = 4")
+
+
+result.show()
