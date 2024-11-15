@@ -22,7 +22,7 @@ Ce projet est un TP pratique pour découvrir Apache Spark et comprendre ses avan
 Commencez par cloner ce dépôt GitHub sur votre machine locale.
 
 ```
-git clone <URL_DU_DEPOT>
+git clone https://github.com/scoulet/EPISEN_TP_1
 cd EPISEN_TP1_SPARK
 ```
 
