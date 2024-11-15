@@ -16,13 +16,14 @@ def main():
     df_filtered.show(5)
 
     # Sauvegarder les résultats
-    df_filtered.write.parquet("data/0_spark_job_output/convert_to_parquet")
+    df_filtered.write.mode("overwrite").parquet("data/0_spark_job_output/convert_to_parquet")
 
     # Exemple de sql
     print("exemple de query passée sur du csv : ")
     df_filtered.createOrReplaceTempView("sql_df")
     df_result = spark.sql("SELECT * FROM sql_df WHERE salary > 50000")
-    df_result.write.csv("data/0_spark_job_output/sql_result", header = True)
+    df_result.show()
+    df_result.write.mode("overwrite").csv("data/0_spark_job_output/sql_result", header = True)
     
 
     # Stopper la session Spark
